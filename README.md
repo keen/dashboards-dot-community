@@ -9,6 +9,18 @@ We're going to build this out in the open, and we invite everyone and anyone to 
 
 Watch our repo for updates and progress, fork the codebase to build your own solution that meets your team's unique needs, send us feedback and/or questions to spark conversations, or just be inspired to go build something of your own, be it from scratch or a peacemeal of other existing tools. 
 
+## Potential sources
+
+* Custom data streams
+* Google Analytics
+* Social mentions, impressions, etc. (Twitter/Facebook)
+* Stripe payment data
+* Customer engagement tools like HubSpot, Intercom
+* Email opens/clicks
+* Eventbrite registrations
+* Inbound email
+* Forum posts
+
 Oh yeah, also...[INTERNET HIGH FIVE!](http://keen.github.io/highfive/)
 
 ![rainbow creature](http://media.giphy.com/media/GOt1QQZQ6TOQU/giphy.gif)

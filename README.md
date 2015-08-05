@@ -9,7 +9,7 @@ We're going to build this out in the open, and we invite everyone and anyone to 
 
 Watch our repo for updates and progress, fork the codebase to build your own solution that meets your team's unique needs, send us feedback and/or questions to spark conversations, or just be inspired to go build something of your own, be it from scratch or a peacemeal of other existing tools. 
 
-## Potential data sources
+### Potential data sources
 
 * Custom data streams
 * Google Analytics
@@ -21,7 +21,7 @@ Watch our repo for updates and progress, fork the codebase to build your own sol
 * Inbound email
 * Forum posts
 
-## Metrics that matter: "or do they? well, at least we can track them..."
+### Metrics that matter: "or do they? well, at least we can track them..."
 * new signups (free or paid)
 * upgrades, free to paid or paid to paying more
   * revenue related to signups/upgrades
@@ -36,14 +36,14 @@ Watch our repo for updates and progress, fork the codebase to build your own sol
 *  engagement breakdown (broadcast vs conversation)
 
 
-## Dreamy stats: "if only we knew..."
+### Dreamy stats: "if only we knew..."
 *  quantify the likelihood of a community member signing up vs a non-community member
 *  cost savings related to community helping each other in forums, slack, etc (aka, support costs deflected)
 *  % of users/customers using SDKs and revenue related to those customers (per SDK and org total)
 
   
 
-Oh yeah, also...[INTERNET HIGH FIVE!](http://keen.github.io/highfive/)
+## Oh yeah, also...[INTERNET HIGH FIVE!](http://keen.github.io/highfive/)
 
 ![rainbow creature](http://media.giphy.com/media/GOt1QQZQ6TOQU/giphy.gif)
 

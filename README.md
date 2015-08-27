@@ -34,12 +34,12 @@ Watch our repo for updates and progress, fork the codebase to build your own sol
 *  # of highs-fived
 *  diversity of community
 *  engagement breakdown (broadcast vs conversation)
+*  % of users/customers using SDKs and revenue related to those customers (per SDK and org total)
 
 
 ### Dreamy stats: "if only we knew..."
 *  quantify the likelihood of a community member signing up vs a non-community member
 *  cost savings related to community helping each other in forums, slack, etc (aka, support costs deflected)
-*  % of users/customers using SDKs and revenue related to those customers (per SDK and org total)
 
   
 

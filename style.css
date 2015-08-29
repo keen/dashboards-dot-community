@@ -1,0 +1,31 @@
+html, body, .container-fluid {
+	height: 100%;
+	margin: 0;
+}
+
+#landing {
+  min-height: 100%;
+}
+
+#messenger {
+    position: relative;
+    white-space: pre-wrap;
+}
+
+#messenger-label {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#messenger-input {
+    background-color: #f2f2f2;
+    border: medium none;
+    color: #a7a7a7;
+    display: block;
+    font-size: 48px;
+    font-weight: 100;
+    letter-spacing: 0;
+    outline: none;
+    width: 100%;
+}

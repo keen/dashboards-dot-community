@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboards dot Community</title>
+
+  <link rel="shortcut icon" href="https://keen.io/favicon.ico" type="image/x-icon" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="keen-dashboard.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://d26b395fwzu5fz.cloudfront.net/3.2.7/keen.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+
+
+</head>
+<body class="application">
+
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="./">Community!</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+          <li><a href="https://keen.io">Home</a></li>
+          <li><a href="https://keen.io/team">Team</a></li>
+          <li><a href="#">Option</a></li>
+          <li><a href="#">Option</a></li>
+          <li><a href="#">Option</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+
+    <div class="row" id="landing">
+    <div class="col-sm-6">
+      Hi there! Want to take a second to sign the guest book?
+      <form action="" id="messenger" method="GET">
+        <label id="messenger-label" for="messenger-input">What's your name?</label>
+        <textarea id="messenger-input" placeholder="reply"></textarea>
+      </form>
+    </div>
+    <div class="col-sm-6">
+    There will be content here, explaining commuinty stuff. Tim is going to write it :)
+    </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+                Cell Title
+              </div>
+              <div id="chart-01"></div>
+              <div class="chart-notes">
+                chart-01
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+                Cell Title
+              </div>
+              <div id="chart-02"></div>
+              <div class="chart-notes">
+                chart-02
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Cell Title
+          </div>
+          <div id="chart-03"></div>
+          <div class="chart-notes">
+            chart-03
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+                Cell Title
+              </div>
+              <div id="chart-04"></div>
+              <div class="chart-notes">
+                chart-04
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+                Cell Title
+              </div>
+              <div id="chart-05"></div>
+              <div class="chart-notes">
+                chart-05
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Cell Title
+          </div>
+          <div id="chart-06"></div>
+          <div class="chart-notes">
+            chart-06
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Cell Title
+          </div>
+          <div id="chart-07"></div>
+          <div class="chart-notes">
+            chart-07
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Cell Title
+          </div>
+          <div id="chart-08"></div>
+          <div class="chart-notes">
+            chart-08
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Cell Title
+          </div>
+          <div id="chart-09"></div>
+          <div class="chart-notes">
+            chart-09
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Cell Title
+          </div>
+          <div id="chart-10"></div>
+          <div class="chart-notes">
+            chart-10
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Cell Title
+          </div>
+          <div id="chart-11"></div>
+          <div class="chart-notes">
+            chart-11
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+    <hr>
+
+    <p class="small text-muted">Built with &#9829; by <a href="https://keen.io">Keen IO</a></p>
+
+  </div>
+
+<script src="keen-tracking.js" type="text/javascript"></script>
+<!-- <script src="form.js" type="text/javascript"></script> -->
+
+</body>
+</html>

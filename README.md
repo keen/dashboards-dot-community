@@ -12,7 +12,7 @@ Watch our repo for updates and progress, fork the codebase to build your own sol
 ### Potential data sources
 
 * Custom data streams
-* Google Analytics
+* Keen IO pageview analytics
 * Social mentions, impressions, etc. (Twitter/Facebook)
 * Stripe payment data
 * Customer engagement tools like HubSpot, Intercom

@@ -27,16 +27,17 @@ body.application hr {
 
 
 .navbar-inverse {
-  background-color: white;
+  background-color: #00CFBB;
+  border-color: #00CFBB;
 }
 .navbar-inverse .navbar-nav > li > a,
 .navbar .navbar-brand {
-  color: gray;
+  color: white;
   text-decoration: none;
 }
 
 .main-nav > li > a:hover {
-  border-bottom: 2px solid transparent;
+  /*border-bottom: 2px solid transparent;*/
   -webkit-transition: border 300ms ease;
   -o-transition: border 300ms ease;
   transition: border 300ms ease;
@@ -74,4 +75,15 @@ body.application hr {
   color: #808080;
   font-size: 12px;
   padding: 8px 10px 5px;
+}
+
+#map {
+  height: 250px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#about {
+  
 }

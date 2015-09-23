@@ -11,12 +11,6 @@ Keen.ready(function(){
 
 // Executes when the library is loaded and ready
 function init(){
-  // Create a new client instance
-  // Use this for query+dataviz
-  var client = new Keen({
-      projectId: '55df52e9e08557169c200d01',
-      readKey: 'af12bc76de28231d92b51a85b6c776aa5d55b0d85fb2a31f25b20ffd87771055bae4411aeb159a7055364a716a7a2a63d92c5dd6b50721f71467bbe07aaf8903ba5134bd0df1b533099b9c7c691cc55a9ffe0f3ce13d3ff3b35d9e553900f3b5a78635a152a9a73495e423aeaa8d5bef'
-  });
 
   // Use this for recording events
   var tracker = new KeenTracker({
@@ -35,12 +29,6 @@ function init(){
     var sessionTimer = KeenTracker.utils.timer();
     sessionTimer.start();
 
-    KeenTracker.listenTo({
-      'click button.btn-primary': function(e){
-          // 500ms to record an event
-          tracker.recordEvent('highfive');
-      }
-    });
 
     // THE BIG DATA MODEL!
     tracker.extendEvents(function(){

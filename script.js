@@ -1,9 +1,27 @@
 var client = new Keen({
   projectId: "55df52e9e08557169c200d01",
-  readKey: "af12bc76de28231d92b51a85b6c776aa5d55b0d85fb2a31f25b20ffd87771055bae4411aeb159a7055364a716a7a2a63d92c5dd6b50721f71467bbe07aaf8903ba5134bd0df1b533099b9c7c691cc55a9ffe0f3ce13d3ff3b35d9e553900f3b5a78635a152a9a73495e423aeaa8d5bef"
+  readKey: "af12bc76de28231d92b51a85b6c776aa5d55b0d85fb2a31f25b20ffd87771055bae4411aeb159a7055364a716a7a2a63d92c5dd6b50721f71467bbe07aaf8903ba5134bd0df1b533099b9c7c691cc55a9ffe0f3ce13d3ff3b35d9e553900f3b5a78635a152a9a73495e423aeaa8d5bef",
+  writeKey: "746f3c35d2deba27273543298152fcea67d0d90796e9b699d853b07b7b18a340c7218e0256e8a17bc73ed947af7d74c978d64b83b6cdd4513641a4eae6d3be2731eba526cba195e9b0e2c507dbe7ebe611c52b3738e28de40ed1f801136b0024f5258e5cc652ace8b1426963f520d185"
 });
 
+var form, label, input, client, convo;
+
 Keen.ready(function(){
+
+  // table for recent guestbook signatures
+  var query = new Keen.Query("extraction", {
+    eventCollection: "message",
+    targetProperty: "message.name",
+    timeframe: "this_1_months",
+    timezone: "UTC",
+    propertyNames: ["message.name", "message.text", "geo.city", "geo.country"]
+  });
+
+  client.draw(query, document.getElementById("guestbook"), {
+    chartType:"table",
+    title: false
+  });
+
 
   // ----------------------------------------
   // Query one
@@ -38,13 +56,11 @@ Keen.ready(function(){
   // Query two
   // ----------------------------------------
   var pageviews_static = new Keen.Query("count", {
-   eventCollection: "pageview",
-   groupBy: "tech.info.browser.family",
-   timeframe: "this_1_weeks",
-   timezone: "US/Pacific"
+    eventCollection: "message",
+     timeframe: "this_1_years",
+     timezone: "US/Pacific"
   });
   client.draw(pageviews_static, document.getElementById("chart-02"), {
-    chartType: "columnchart",
     title: false,
     height: 250,
     width: "auto",
@@ -251,13 +267,10 @@ Keen.ready(function(){
   // ----------------------------------------
   var impressions_timeline_by_device = new Keen.Query("count", {
     eventCollection: "pageview",
-    groupBy: "tech.browser.language ",
-    interval: "hourly",
-    timeframe: "this_1_weeks",
-    timezone: "US/Pacific"
-  });
+        timeframe: "this_1_years",
+        timezone: "US/Pacific"
+        });
   client.draw(impressions_timeline_by_device, document.getElementById("chart-09"), {
-    chartType: "columnchart",
     title: false,
     height: 250,
     width: "auto",
@@ -283,13 +296,10 @@ Keen.ready(function(){
   // ----------------------------------------
   var impressions_timeline_by_country = new Keen.Query("count", {
     eventCollection: "pageview",
-    groupBy: "user.geo_info.country",
-    interval: "hourly",
-    timeframe: "this_1_weeks",
-    timezone: "US/Pacific"
-  });
+       timeframe: "this_1_weeks",
+       timezone: "US/Pacific"
+       });
   client.draw(impressions_timeline_by_country, document.getElementById("chart-10"), {
-    chartType: "columnchart",
     title: false,
     height: 250,
     width: "auto",
@@ -313,14 +323,11 @@ Keen.ready(function(){
   // query eleven
   // ----------------------------------------
   var pageviews_timeline = new Keen.Query("count", {
-    eventCollection: "pageview",
-    interval: "hourly",
-    groupBy: "tech.info.browser.family",
-    timeframe: "this_1_weeks",
-    timezone: "US/Pacific"
+    eventCollection: "message",
+     timeframe: "this_1_years",
+     timezone: "US/Pacific"
   });
   client.draw(pageviews_timeline, document.getElementById("chart-11"), {
-    chartType: "areachart",
     title: false,
     height: 250,
     width: "auto",
@@ -329,20 +336,17 @@ Keen.ready(function(){
         height: "85%",
         left: "5%",
         top: "5%",
-        width: "80%"
+        width: "100%"
       },
-      isStacked: true
+      pieHole: .4
     }
   });
   // ----------------------------------------
   //  End query eleven
   // ----------------------------------------
-
 });
 
-var form, label, input, client, convo;
-
-  function init(){
+  function inthis(){
     form = document.getElementById('messenger');
     label = document.getElementById('messenger-label');
     input = document.getElementById('messenger-input');
@@ -438,11 +442,6 @@ var form, label, input, client, convo;
   }
 
   function initAnalytics(){
-    client = new Keen({
-      projectId: '55df52e9e08557169c200d01',
-      writeKey: '746f3c35d2deba27273543298152fcea67d0d90796e9b699d853b07b7b18a340c7218e0256e8a17bc73ed947af7d74c978d64b83b6cdd4513641a4eae6d3be2731eba526cba195e9b0e2c507dbe7ebe611c52b3738e28de40ed1f801136b0024f5258e5cc652ace8b1426963f520d185',
-      requestType: "xhr"
-    });
 
     client.setGlobalProperties(function(collection){
       return {
@@ -489,4 +488,4 @@ var form, label, input, client, convo;
       };
     });
   }
-$( window ).ready( init );
+$( document ).ready( inthis );

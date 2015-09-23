@@ -1,6 +1,7 @@
 html, body, .container-fluid {
 	height: 100%;
 	margin: 0;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 #landing {
@@ -9,17 +10,16 @@ html, body, .container-fluid {
 
 #messenger {
     position: relative;
-    white-space: pre-wrap;
 }
 
 #messenger-label {
     display: block;
+    font-weight: 300;
     font-size: 18px;
-    font-weight: 500;
+    margin: 0;
 }
 
 #messenger-input {
-    background-color: #f2f2f2;
     border: medium none;
     color: #a7a7a7;
     display: block;
@@ -28,4 +28,13 @@ html, body, .container-fluid {
     letter-spacing: 0;
     outline: none;
     width: 100%;
+}
+
+#cheveron {
+  font-size: 40px;
+  color: gray;
+  position: absolute;
+  bottom: 2px;
+  padding-left: 48%;
+  display: block;
 }

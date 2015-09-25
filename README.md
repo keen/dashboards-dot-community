@@ -1,4 +1,4 @@
-# community-dashboard
+# Analytics for Community teams: 
 **This is a collaborative project to help community teams be better at recording the impact of their activities and communicating emperical results to their teams and others througout the organization.**
 
 It's pretty easy to "just know" that your community-building efforts have a positive impact on your business. But intution must be accompanied by dependable, relevant data in order to tell a cohesive story. The outcomes of [developer evangelism](https://sendgrid.com/blog/explained-developer-evangelism-parents/) (for example) are difficult to capture, quantify, and communicate to others.

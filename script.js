@@ -26,51 +26,46 @@ Keen.ready(function(){
   // ----------------------------------------
   // Query one
   // ----------------------------------------
-  var pageviews_timeline = new Keen.Query("count", {
-    eventCollection: "pageview",
-       groupBy: "geo.city",
-       timeframe: "this_1_weeks",
-       timezone: "US/Pacific"
-    });
-  client.draw(pageviews_timeline, document.getElementById("chart-01"), {
-    chartType: "columnchart",
-    title: false,
-    height: 250,
-    width: "auto",
-    chartOptions: {
-      chartArea: {
-        height: "85%",
-        left: "5%",
-        top: "5%",
-        width: "80%"
-      },
-      isStacked: true
-    }
-  });
-  // ----------------------------------------
-  //  End query one
-  // ----------------------------------------
+  var el = document.getElementById("chart-01");
 
+    var query = new Keen.Query("count", {
+        eventCollection: "message",
+        timeframe: "this_1_year",
+        groupBy: "geo.country"
+    });
+
+    var chart = new Keen.Dataviz()
+        .el(el)
+        .height(400)
+        .prepare();
+
+    client.run(query, function(err, res){
+       chart
+           .parseRequest(this)
+           .call(function(){
+               var ds, map;
+               ds = new google.visualization.arrayToDataTable(this.data());
+
+               map = new google.visualization.GeoChart(this.el());
+               map.draw(ds);
+           });
+    });
 
   // ----------------------------------------
   // Query two
   // ----------------------------------------
   var pageviews_static = new Keen.Query("count", {
-    eventCollection: "message",
-     timeframe: "this_1_years",
-     timezone: "US/Pacific"
+    eventCollection: "pageview",
+    groupBy: "geo.country",
+    timeframe: "this_1_months",
+    timezone: "UTC"
   });
   client.draw(pageviews_static, document.getElementById("chart-02"), {
+    chartType: "barchart",
     title: false,
     height: 250,
     width: "auto",
     chartOptions: {
-      chartArea: {
-        height: "85%",
-        left: "5%",
-        top: "5%",
-        width: "100%"
-      },
       pieHole: .4
     }
   });
@@ -83,9 +78,9 @@ Keen.ready(function(){
   // ----------------------------------------
   var impressions_timeline = new Keen.Query("count", {
     eventCollection: "pageview",
-    groupBy: "referrer.info.medium",
-    timeframe: "this_1_weeks",
-    timezone: "US/Pacific"
+    groupBy: "geo.city",
+    timeframe: "this_1_months",
+    timezone: "UTC"
   });
   client.draw(impressions_timeline, document.getElementById("chart-03"), {
     chartType: "columnchart",
@@ -114,13 +109,13 @@ Keen.ready(function(){
   // ----------------------------------------
   var impressions_timeline_by_device = new Keen.Query("count", {
     eventCollection: "pageview",
-    groupBy: "geo.city",
-    interval: "hourly",
-    timeframe: "this_1_weeks",
-    timezone: "US/Pacific"
-  });
+       groupBy: "tech.info.os.family",
+       targetProperty: "tech.info.browser.family",
+       timeframe: "this_1_months",
+       timezone: "US/Pacific"
+       });
   client.draw(impressions_timeline_by_device, document.getElementById("chart-04"), {
-    chartType: "columnchart",
+    chartType: "barchart",
     title: false,
     height: 250,
     width: "auto",
@@ -348,97 +343,31 @@ Keen.ready(function(){
 
   function inthis(){
     form = document.getElementById('messenger');
-    label = document.getElementById('messenger-label');
-    input = document.getElementById('messenger-input');
-
-    convo = {
-      marker: 'name',
-      name: {
-        label: 'What\'s your name?',
-        placeholder: 'reply',
-        reply: ''
-      },
-      message: {
-        label: 'Hello, {Name}! Where do you work?',
-        placeholder: 'reply',
-        reply: ''
-      },
-      contact: {
-        label: 'What\'s your email so we can send you friendly communication?',
-        placeholder: 'reply',
-        reply: ''
-      },
-      thanks: {
-        label: 'Roger that, {Name}!',
-        placeholder: 'thanks :)',
-        reply: undefined
-      }
-    };
 
     if (window.addEventListener) {
-      input.addEventListener('keydown', handleKeypress);
       form.addEventListener('submit', handleSubmit);
     }
     else {
-      input.attachEvent('onkeydown', handleKeypress);
       form.attachEvent('onsubmit', handleSubmit);
     }
-
     initAnalytics();
-  }
-
-  function handleCompletion(){
-    client.addEvent('message', {
-      message: {
-        name: convo['name'].reply,
-        text: convo['message'].reply,
-        contact: convo['contact'].reply
-      }
-    });
-  }
-
-  function handleKeypress(e){
-    if (e.keyCode === 13) {
-      handleSubmit(input.value);
-    }
-    else {
-      resetTextareaHeight();
-    }
   }
 
   function handleSubmit(e){
     if (e && e.preventDefault) {
       e.preventDefault();
     }
-    convo[convo.marker].reply = input.value;
-    switch (convo.marker) {
-      case 'name':
-        convo.marker = 'message';
-        break;
-      case 'message':
-        convo.marker = 'contact';
-        break;
-      case 'contact':
-        convo.marker = 'thanks';
-        input.disabled = true;
-        handleCompletion();
-        // console.log(convo);
-        break;
-    }
-    input.blur();
-    input.value = '';
-    label.innerHTML = convo[convo.marker]['label'].replace('{Name}', convo['name'].reply);
-    input.placeholder = convo[convo.marker]['placeholder'];
-    setTimeout(function(){
-      input.focus();
-    }, 500);
+    client.addEvent('message', {
+      message: {
+        name: document.getElementById('name-input').value,
+        company: document.getElementById('company-input').value,
+        note: document.getElementById('note-input').value,
+        contact: document.getElementById('contact-input').value
+      }
+    });
 
-  }
-
-  function resetTextareaHeight(len){
-    var len = input.value.length;
-    var width = input.clientWidth;
-    input.style.minHeight = len / (width/23) * 70 + "px";
+    form.style.display = 'none';
+    document.getElementById('message-sent').style.display = 'block';
   }
 
   function initAnalytics(){

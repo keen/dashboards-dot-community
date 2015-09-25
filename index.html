@@ -12,70 +12,6 @@
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="https://d26b395fwzu5fz.cloudfront.net/3.2.7/keen.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
-  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeHq6g4_6A0tBJeMG7gyMoKo0hwVn1B0Q&callback=initMap"
-      async defer></script> -->
-  <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-  <script type="text/javascript">
-  google.maps.event.addDomListener(window, 'load', function() {
-
-        var bounds = new google.maps.LatLngBounds ();
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: new google.maps.LatLng(0, 0),
-          zoom: 2
-        });
-        var geocoder = new google.maps.Geocoder();
-
-      var client = new Keen({
-          projectId: "55df52e9e08557169c200d01",
-          readKey: "af12bc76de28231d92b51a85b6c776aa5d55b0d85fb2a31f25b20ffd87771055bae4411aeb159a7055364a716a7a2a63d92c5dd6b50721f71467bbe07aaf8903ba5134bd0df1b533099b9c7c691cc55a9ffe0f3ce13d3ff3b35d9e553900f3b5a78635a152a9a73495e423aeaa8d5bef"
-        });
-
-        Keen.ready(function(){
-
-          var unique = new Keen.Query("messages", {
-            analysisType: "select_unique",
-            targetProperty: "geo.city"
-          });
-
-          unique.getResponse(function(response){
-            console.log(response);
-
-            for (var i = 0; i < response.result.length; i++) {
-              (function(){
-                if (response.result[i] !== undefined && response.result[i] !== null) {
-                  // var latlng = new google.maps.LatLng(response.result[i][1], response.result[i][0]);
-                  // var marker = new google.maps.Marker({
-                  //   position: latlng,
-                  //   map: map
-                  // });
-                  function geocodeAddress(geocoder, resultsMap) {
-                    var address = response;
-                    geocoder.geocode({'address': address}, function(results, status) {
-                      if (status === google.maps.GeocoderStatus.OK) {
-                        resultsMap.setCenter(results[0].geometry.location);
-                        var marker = new google.maps.Marker({
-                          map: resultsMap,
-                          position: results[0].geometry.location
-                        });
-                      } else {
-                        alert('Geocode was not successful for the following reason: ' + status);
-                      }
-                  });
-                }
-                  // bounds.extend(latlng);
-                }
-              })();
-              // map.fitBounds(bounds);
-            }
-
-          });
-
-        });
-
-      });
-
-  </script> -->
-
 </head>
 <body class="application">
 
@@ -101,73 +37,83 @@
   </div>
 
   <div class="container-fluid">
-
-    <div class="row" id="landing">
+  <div class="row" id="landing">
     <div class="col-sm-6">
       <h2>Visiting from the CMX Yearbook project?</h2>
       <h4>Cool, you're in the right place!</h4>
-      <br>Leave a note to your fellow attendees of CMX Summit East 2015, be it to an individual or the entire community. Your most inspirational reflections, most helpful lessons, silliest, most memorable moments.
+      <br>Leave a note to your fellow attendees of CMX Summit East 2015, be it to an individual or the entire community. Your most inspirational reflections, helpful lessons learned, or silliest, most memorable moments.
     </div>
     <div class="col-sm-6">
       <h3>Take a second to sign the Yearbook below and see the messages others have left.</h3>
       <form action="" id="messenger" method="GET">
-        <label id="messenger-label" for="messenger-input">What's your name?</label>
-        <textarea id="messenger-input" placeholder="reply"></textarea>
+        <label for="name-input">name:</label>
+        <input type="text" id="name-input" />
+        <br><label for="company-input">company:</label>
+        <input type="text" id="company-input" />
+        <br><label for="note-input">write a note!:</label>
+        <textarea id="note-input" placeholder="reply"></textarea>
+        <br><label for="contact-input">contact info:</label>
+        <input type="text" id="contact-input" />
+        <br><input type="submit" value="submit" />
       </form>
+      <div id="message-sent" style="display: none;">
+        <p>Thanks!</p>
+      </div>
+      <br>
       <div class="chart-title">
         Messages from this month.
         <div id="guestbook"></div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-2"></div>
-      <div class="col-sm-8" id="about">
-        <br>This fun little yearbook project is a starting point of a more extensive initiative. Our aim is to catalyze an open collaboration of community-minded professionals who strive to improve the analytics behind their community-building/evangelism efforts.
-        <br><br>At Keen IO, we devote tons of resources to community-building. Naturally, we want to understand the impact. There is data behind what we do; it's just difficult to gather and turn into meaningful insights. We want to tackle this challenge, and we know others do, too. So, we're inviting the community of community builders to collaborate with each other, share knowledge, tactics, and think together.
-        <br><br>Sound vaguely interesting? It's all going down (for now) on <a href="https://github.com/keen/dashboards-dot-community">Github</a>. Join the conversation, help your peers, and learn from others' experiences.
-      </div>
-      <div class="col-sm-2"></div>
-    </div>
-    <div id="cheveron">v</div>
-    </div>
 
+  </div>
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8" id="about">
+      <h2>Learn more</h2>
+          <br>This fun little yearbook project is the starting point for a more extensive initiative. We hope to catalyze an open collaboration of community-minded professionals who strive to improve the analytics behind their community-building/evangelism efforts.
+          <br><br>At <a href="https://keen.io">Keen IO</a>, we devote a lot of resources to building community. Naturally, we want to understand the impact of our investments. There is data behind what we do; it's just not easy to gather and turn into meaningful information. We want to tackle this challenge, and we know others do, too. So, we're inviting the community of community builders to collaborate with each other, share knowledge and tactics, and think together.
+          <br><br>Sound vaguely interesting? It's all going down on <a href="https://github.com/keen/dashboards-dot-community">Github</a>. Join the conversation, help your peers, and learn from others' experiences.
+          <br><br>
+          <h2>See it in action!</h2>
+          <br>The dashboard below is a live example of what's possible. This is a simple visualization of the activity around the CMX Yearbook project. By collecting data, asking questions of it, and vizualizing the answers, we get a sense of the effectiveness of our partnership with <a href="http://cmxhub.com/">CMX</a>.
+          <br><br>If you'd like to create a dashboard like this to report on your community team's performance, go ahead and <a href="https://keen.io/signup/">create a free Keen IO account</a>. Need help? <a href="mailto:community@keen.io?Subject=My%20community%20dashboard" target="_top">We're here for ya!</a>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
     <div class="row" id="second">
       <div class="col-sm-8">
           <div class="chart-wrapper">
             <div class="chart-title">
-              Cell Title
+              Where are the yearbook signups coming from?
             </div>
             <div id="chart-01"></div>
             <div class="chart-notes">
-              chart-01
+              High-Five
             </div>
-            <!-- <div id="map"></div>
-            <div class="chart-notes">
-              map
-            </div> -->
           </div>
         </div>
         <div class="col-sm-4">
             <div class="chart-wrapper">
               <div class="chart-title">
-                # of Guestbook Friends
+                Visits devided by country
               </div>
               <div id="chart-02"></div>
               <div class="chart-notes">
-                From this year
+                From this month
               </div>
             </div>
           </div>
       </div>
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-8">
         <div class="chart-wrapper">
           <div class="chart-title">
-            Cell Title
+            Visits grouped by city
           </div>
-          <div id="chart-06"></div>
+          <div id="chart-03"></div>
           <div class="chart-notes">
-            chart-06
+            this month
           </div>
         </div>
       </div>
@@ -176,20 +122,9 @@
           <div class="chart-title">
             Cell Title
           </div>
-          <div id="chart-07"></div>
+          <div id="chart-04"></div>
           <div class="chart-notes">
-            chart-07
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="chart-wrapper">
-          <div class="chart-title">
-            Cell Title
-          </div>
-          <div id="chart-08"></div>
-          <div class="chart-notes">
-            chart-08
+            chart-04
           </div>
         </div>
       </div>
@@ -230,8 +165,6 @@
       </div>
     </div>
 
-  </div>
-
     <hr>
 
     <p class="small text-muted">Built with &#9829; by <a href="https://keen.io">Keen IO</a></p>
@@ -239,25 +172,6 @@
   </div>
 
 <script src="keen-tracking.js" type="text/javascript"></script>
-
-<!-- <script type="text/javascript">
-var map;
-function initMap() {
-map = new google.maps.Map(document.getElementById('map'), {
-center: {lat: -34.397, lng: 150.644},
-zoom: 8
-});
-}
-</script> -->
-
-<script>
-// for scrolling to metrics
-$("#cheveron").click(function() {
-    $('html,body').animate({
-        scrollTop: $("#second").offset().top},
-        'slow');
-});
-</script>
 
 </body>
 </html>

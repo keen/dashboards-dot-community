@@ -14,7 +14,7 @@ Keen.ready(function(){
     targetProperty: "message.name",
     timeframe: "this_1_months",
     timezone: "UTC",
-    propertyNames: ["message.name", "message.text", "geo.city", "geo.country"]
+    propertyNames: ["message.name", "message.company", "message.note", "geo.city", "geo.country"]
   });
 
   client.draw(query, document.getElementById("guestbook"), {

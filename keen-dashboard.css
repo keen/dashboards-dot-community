@@ -32,7 +32,7 @@ body.application hr {
 }
 .navbar-inverse .navbar-nav > li > a,
 .navbar .navbar-brand {
-  color: white;
+  color: #ff69b4;
   text-decoration: none;
 }
 
@@ -85,5 +85,5 @@ body.application hr {
 }
 
 #about {
-  
+
 }

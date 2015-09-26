@@ -1,8 +1,15 @@
 html, body, .container-fluid {
 	height: 100%;
 	margin: 0;
+  padding: 0;
   font-family: "Comic Sans MS", cursive, sans-serif;
   text-align: center;
+  color: white;
+  background-image: url("http://jonwye.com/wordpress/wp-content/uploads/2012/03/LASERS.jpg");
+}
+
+a {
+  color: #ff69b4;
 }
 
 #landing {
@@ -12,6 +19,14 @@ html, body, .container-fluid {
 
 #messenger {
     position: relative;
+}
+
+#guestbook {
+  color: black;
+}
+
+#submit-button {
+  color: black;
 }
 
 #messenger-label {

@@ -21,6 +21,8 @@ a {
     position: relative;
 }
 
+
+
 #guestbook {
   color: black;
 }
@@ -38,13 +40,16 @@ a {
 
 #messenger-input {
     border: medium none;
-    color: #a7a7a7;
     display: block;
     font-size: 48px;
     font-weight: 100;
     letter-spacing: 0;
     outline: none;
     width: 100%;
+}
+
+#messenger-input input {
+  color: black;
 }
 
 #name-label{
@@ -57,6 +62,18 @@ a {
 
 #contact-label{
   padding-right: 6px;
+}
+
+#name-input{
+  color: black;
+}
+
+#company-input{
+  color: black;
+}
+
+#contact-input{
+  color: black;
 }
 
 #submit-button{

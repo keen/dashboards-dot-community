@@ -2,10 +2,12 @@ html, body, .container-fluid {
 	height: 100%;
 	margin: 0;
   font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
 }
 
 #landing {
   min-height: 100%;
+  padding-bottom: 25px;
 }
 
 #messenger {
@@ -30,11 +32,18 @@ html, body, .container-fluid {
     width: 100%;
 }
 
-#cheveron {
-  font-size: 40px;
-  color: gray;
-  position: absolute;
-  bottom: 2px;
-  padding-left: 48%;
-  display: block;
+#name-label{
+  padding-right: 54px;
+}
+
+#company-label{
+  padding-right: 32px;
+}
+
+#contact-label{
+  padding-right: 6px;
+}
+
+#submit-button{
+  margin-left: 98px;
 }

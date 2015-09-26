@@ -38,23 +38,23 @@
 
   <div class="container-fluid">
   <div class="row" id="landing">
-    <div class="col-sm-6">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
       <h2>Visiting from the CMX Yearbook project?</h2>
       <h4>Cool, you're in the right place!</h4>
       <br>Leave a note to your fellow attendees of CMX Summit East 2015, be it to an individual or the entire community. Your most inspirational reflections, helpful lessons learned, or silliest, most memorable moments.
-    </div>
-    <div class="col-sm-6">
+
       <h3>Take a second to sign the Yearbook below and see the messages others have left.</h3>
       <form action="" id="messenger" method="GET">
-        <label for="name-input">name:</label>
+        <label for="name-input" id="name-label">name:</label>
         <input type="text" id="name-input" />
-        <br><label for="company-input">company:</label>
+        <br><label for="company-input" id="company-label">company:</label>
         <input type="text" id="company-input" />
-        <br><label for="note-input">write a note!:</label>
-        <textarea id="note-input" placeholder="reply"></textarea>
-        <br><label for="contact-input">contact info:</label>
+        <br><label for="contact-input" id="contact-label">contact info:</label>
         <input type="text" id="contact-input" />
-        <br><input type="submit" value="submit" />
+        <br><label for="note-input" id="note-label">write a note!:</label>
+        <textarea id="note-input" placeholder="reply"></textarea>
+        <br><input type="submit" value="submit" id="submit-button"/>
       </form>
       <div id="message-sent" style="display: none;">
         <p>Thanks!</p>
@@ -65,7 +65,7 @@
         <div id="guestbook"></div>
       </div>
     </div>
-
+    <div class="col-sm-2"></div>
   </div>
   <div class="row">
     <div class="col-sm-2"></div>
@@ -78,92 +78,93 @@
           <h2>See it in action!</h2>
           <br>The dashboard below is a live example of what's possible. This is a simple visualization of the activity around the CMX Yearbook project. By collecting data, asking questions of it, and vizualizing the answers, we get a sense of the effectiveness of our partnership with <a href="http://cmxhub.com/">CMX</a>.
           <br><br>If you'd like to create a dashboard like this to report on your community team's performance, go ahead and <a href="https://keen.io/signup/">create a free Keen IO account</a>. Need help? <a href="mailto:community@keen.io?Subject=My%20community%20dashboard" target="_top">We're here for ya!</a>
+          <br><hr><br>
     </div>
     <div class="col-sm-2"></div>
   </div>
-    <div class="row" id="second">
-      <div class="col-sm-8">
+  <div class="row" id="second">
+    <div class="col-sm-8">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Where are the yearbook signups coming from?
+          </div>
+          <div id="chart-01"></div>
+          <div class="chart-notes">
+            High-Five
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
           <div class="chart-wrapper">
             <div class="chart-title">
-              Where are the yearbook signups coming from?
+              Visits devided by country
             </div>
-            <div id="chart-01"></div>
+            <div id="chart-02"></div>
             <div class="chart-notes">
-              High-Five
+              From this month
             </div>
           </div>
         </div>
-        <div class="col-sm-4">
-            <div class="chart-wrapper">
-              <div class="chart-title">
-                Visits devided by country
-              </div>
-              <div id="chart-02"></div>
-              <div class="chart-notes">
-                From this month
-              </div>
-            </div>
-          </div>
-      </div>
-    <div class="row">
-      <div class="col-sm-8">
-        <div class="chart-wrapper">
-          <div class="chart-title">
-            Visits grouped by city
-          </div>
-          <div id="chart-03"></div>
-          <div class="chart-notes">
-            this month
-          </div>
+    </div>
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="chart-wrapper">
+        <div class="chart-title">
+          Visits grouped by city
         </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="chart-wrapper">
-          <div class="chart-title">
-            Cell Title
-          </div>
-          <div id="chart-04"></div>
-          <div class="chart-notes">
-            chart-04
-          </div>
+        <div id="chart-03"></div>
+        <div class="chart-notes">
+          this month
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-4">
-        <div class="chart-wrapper">
-          <div class="chart-title">
-            Pageviews this Year
-          </div>
-          <div id="chart-09"></div>
-          <div class="chart-notes">
-            Wow!
-          </div>
+    <div class="col-sm-4">
+      <div class="chart-wrapper">
+        <div class="chart-title">
+          Cell Title
         </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="chart-wrapper">
-          <div class="chart-title">
-            Pageviews this Week
-          </div>
-          <div id="chart-10"></div>
-          <div class="chart-notes">
-            ohai
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="chart-wrapper">
-          <div class="chart-title">
-              # of Guestbook Friends
-          </div>
-          <div id="chart-11"></div>
-          <div class="chart-notes">
-            from this year
-          </div>
+        <div id="chart-04"></div>
+        <div class="chart-notes">
+          chart-04
         </div>
       </div>
     </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="chart-wrapper">
+        <div class="chart-title">
+          Pageviews this Year
+        </div>
+        <div id="chart-09"></div>
+        <div class="chart-notes">
+          Wow!
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="chart-wrapper">
+        <div class="chart-title">
+          Pageviews this Week
+        </div>
+        <div id="chart-10"></div>
+        <div class="chart-notes">
+          ohai
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="chart-wrapper">
+        <div class="chart-title">
+            # of Guestbook Friends
+        </div>
+        <div id="chart-11"></div>
+        <div class="chart-notes">
+          from this year
+        </div>
+      </div>
+    </div>
+  </div>
 
     <hr>
 

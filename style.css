@@ -76,6 +76,10 @@ a {
   color: black;
 }
 
+#note-input{
+  color: black;
+}
+
 #submit-button{
   margin-left: 98px;
 }

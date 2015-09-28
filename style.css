@@ -2,10 +2,29 @@ html, body, .container-fluid {
 	height: 100%;
 	margin: 0;
   padding: 0;
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Comic Sans MS", "Marker Felt", sans-serif;
   text-align: center;
   color: white;
   background-image: url("http://jonwye.com/wordpress/wp-content/uploads/2012/03/LASERS.jpg");
+}
+
+.navbar-header, .navbar.navbar-inverse.navbar-fixed-top {
+  background-image: url("http://jonwye.com/wordpress/wp-content/uploads/2012/03/LASERS.jpg");
+  background-repeat: repeat;
+}
+
+.navbar-header {
+  padding-left: 10px;
+}
+
+#landing {
+  background-image: url("http://jonwye.com/wordpress/wp-content/uploads/2012/03/LASERS.jpg");
+  background-size: cover;
+}
+
+#about {
+  background-image: url("http://www.yearbookinnovation.com/data/images/backgrounds/top/senior/SBG13.jpg");
+  background-size: cover;
 }
 
 a {
@@ -20,8 +39,6 @@ a {
 #messenger {
     position: relative;
 }
-
-
 
 #guestbook {
   color: black;

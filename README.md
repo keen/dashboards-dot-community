@@ -11,7 +11,7 @@ Watch this repo for updates and progress, create an issue and/or submit a pull r
 
 ![screenshot of emc{code}'s community dashboard](https://s3-us-west-1.amazonaws.com/tf-community-graphics/emc+code+keen+dashboard)
 
-### Some potential sources from which one might pull in the **data** ***collection*** process: 
+###Potential sources from which one might pull, during the **data** ***collection*** process: 
 
 * Custom data streams: examples? --> could be data from your application - like signups, logins, etc
 * Social: mentions, interactions/engagements, impressions, etc: Twitter, Facebook, Instagram, Youtube ...
@@ -22,7 +22,7 @@ Watch this repo for updates and progress, create an issue and/or submit a pull r
 * Forum activity: StackOverflow, Discourse, Google Groups ...
 * Keen IO event data (anything you want to send to Keen for storage, analysis, visualization)
 
-### Metrics that matter: "or do they? well, at least we can track them..."
+### Metrics that matter...or do they?
 * New signups (free or paid)
 * Upgrades, conversions from free to paid, or paid to paying more
   * Revenue related to signups/upgrades

@@ -7,41 +7,39 @@ So, we aim to overcome the challenges by building a solution that fits the strat
 
 We're going to build this out in the open, and we invite everyone and anyone to join us in the journey. We want this to be useful to as many people and in as many ways as possible. 
 
-Watch our repo for updates and progress, fork the codebase to build your own solution that meets your team's unique needs, send us feedback and/or questions to spark conversations, or just be inspired to go build something of your own, be it from scratch or a peacemeal of other existing tools. 
+Watch this repo for updates and progress, create an issue and/or submit a pull request to contribute, fork some code and build a solution that meets your team's unique needs (and tell us all about it!), send us feedback and/or questions to spark conversations, or just be inspired to go build something of your own, be it from scratch or a peacemeal of other existing tools. 
 
 ![screenshot of emc{code}'s community dashboard](https://s3-us-west-1.amazonaws.com/tf-community-graphics/emc+code+keen+dashboard)
 
-### Potential data sources
+### Some potential sources from which one might pull in the **data** ***collection*** process: 
 
-* Custom data streams
-* Keen IO pageview analytics
-* Social mentions, impressions, etc. (Twitter/Facebook)
-* Stripe payment data
-* Customer engagement tools like HubSpot, Intercom
-* Email opens/clicks
-* Eventbrite registrations
-* Inbound email
-* Forum posts
+* Custom data streams: examples? --> could be data from your application - like signups, logins, etc
+* Social: mentions, interactions/engagements, impressions, etc: Twitter, Facebook, Instagram, Youtube ...
+* Payment processing: Stripe, Paypal, Dwolla ...
+* Customer engagement tools: HubSpot, Intercom ...
+* Email events: opens, clicks, unsubscribes, spam reports, etc. /& don't forget inbound email! 
+* RSVPs/Registrations: Eventbrite, Meetup.com, Splash, EventJoy ...
+* Forum activity: StackOverflow, Discourse, Google Groups ...
+* Keen IO event data (anything you want to send to Keen for storage, analysis, visualization)
 
 ### Metrics that matter: "or do they? well, at least we can track them..."
-* new signups (free or paid)
-* upgrades, free to paid or paid to paying more
-  * revenue related to signups/upgrades
-*  Github stars (per repo and org total)
-*  Open source PRs, commits, merges, etc
-*  Slack community activity
-*  social sentiment
-*  top traffic sources (eg, blog posts, docs, Github repos)
-*  t-shirts gifted
+* New signups (free or paid)
+* Upgrades, conversions from free to paid, or paid to paying more
+  * Revenue related to signups/upgrades
+*  Github stars, forks, issues, commits, merges, PRs, etc (per repo and org total)
+*  SDK installs: via - npm, NuGet, pip, Maven ...
+  *  % of users/customers using SDKs and revenue related to those customers (per SDK and org total)
+*  Slack stats: members active, members inactive, members deactivated, new members joined ...
+*  Social sentiment: do they love us or hate us or not care about us?
+*  Top web traffic and conversion sources: internal *and* external referral sources - eg, blog posts, docs, Github repos, press/news/articles)
+*  T-shirts gifted (in person and/or by mail)
 *  # of highs-fived
-*  diversity of community
-*  engagement breakdown (broadcast vs conversation)
-*  % of users/customers using SDKs and revenue related to those customers (per SDK and org total)
+*  Diversity of community -- demographic breakdown
+*  Engagement type -- broadcast vs conversation
 
-
-### Dreamy stats: "if only we knew..."
-*  quantify the likelihood of a community member signing up vs a non-community member
-*  cost savings related to community helping each other in forums, slack, etc (aka, support costs deflected)
+### Dreamy stats: If you could measure anything, what would it be?
+*  quantify the likelihood of a community member signing up vs a *non*-community member
+*  cost savings correlated to community members helping each other in forums, Slack, etc (aka, deflected support costs)
 
   
 

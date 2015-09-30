@@ -9,6 +9,8 @@ We're going to build this out in the open, and we invite everyone and anyone to 
 
 Watch our repo for updates and progress, fork the codebase to build your own solution that meets your team's unique needs, send us feedback and/or questions to spark conversations, or just be inspired to go build something of your own, be it from scratch or a peacemeal of other existing tools. 
 
+![screenshot of emc{code}'s community dashboard](https://s3-us-west-1.amazonaws.com/tf-community-graphics/emc+code+keen+dashboard)
+
 ### Potential data sources
 
 * Custom data streams

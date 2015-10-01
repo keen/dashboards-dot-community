@@ -5,6 +5,8 @@
   * [Dashboard (backend)](http://dashboard.emccode.com/analytics)
   * [Tutorial (how-to)](http://purevirtual.eu/2015/02/09/creating-a-community-and-social-media-dashboard-using-dashing-and-keen-io/)
 
+![screenshot of the dashboard](https://s3-us-west-1.amazonaws.com/tf-community-graphics/emc+code+dashing+dashboard)
+
 * From Salesforce: 
   * [Communities Dashboards (for Communities with Chatter)](https://appexchange.salesforce.com/listingDetail?listingId=a0N3000000B5XHsEAN)
 

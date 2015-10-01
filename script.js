@@ -12,8 +12,8 @@ Keen.ready(function(){
   var query = new Keen.Query("extraction", {
     eventCollection: "message",
     targetProperty: "message.name",
-    timeframe: "this_1_months",
-    timezone: "UTC",
+    timeframe: "this_1_years",
+    timezone: "US/Pacific",
     propertyNames: ["message.name", "message.company", "message.note", "geo.city", "geo.country"]
   });
 

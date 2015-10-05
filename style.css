@@ -5,7 +5,7 @@ html, body, .container-fluid {
   font-family: "Comic Sans MS", "Marker Felt", sans-serif;
   text-align: center;
   color: white;
-  background-image: url("http://s.mlkshk-cdn.com/r/C4Y");
+  background-image: url("https://s3-us-west-2.amazonaws.com/keeniothings/lasers.jpeg");
   background-color: #272F56;
 }
 
@@ -14,14 +14,14 @@ html, body, .container-fluid {
 }
 
 #landing {
-  background-image: url("http://s.mlkshk-cdn.com/r/C4Y");
+  background-image: url("https://s3-us-west-2.amazonaws.com/keeniothings/lasers.jpeg");
   background-size: cover;
   min-height: 100%;
   padding-bottom: 25px;
 }
 
 #about {
-  background-image: url("http://www.yearbookinnovation.com/data/images/backgrounds/top/senior/SBG13.jpg");
+  background-image: url("https://s3-us-west-2.amazonaws.com/keeniothings/bluebackground.jpg");
   background-size: cover;
   background-color: #272F56;
 }

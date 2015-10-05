@@ -29,7 +29,7 @@ Keen.ready(function(){
   var el = document.getElementById("chart-01");
 
     var query = new Keen.Query("count", {
-        eventCollection: "message",
+        eventCollection: "pageview",
         timeframe: "this_1_year",
         groupBy: "geo.country"
     });

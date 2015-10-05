@@ -5,12 +5,8 @@ html, body, .container-fluid {
   font-family: "Comic Sans MS", "Marker Felt", sans-serif;
   text-align: center;
   color: white;
-  background-image: url("http://jonwye.com/wordpress/wp-content/uploads/2012/03/LASERS.jpg");
-}
-
-.navbar-header, .navbar.navbar-inverse.navbar-fixed-top {
-  background-image: url("http://wallpaperswa.com/thumbnails/detail/20121009/outer%20space%20stars%20dark%20tranquillity%20shooting%20star%20nights%20watch%20peaceful%20ambience%20night%20sky%201920x1_www.wallpaperswa.com_84.jpg");
-  background-repeat: repeat;
+  background-image: url("http://s.mlkshk-cdn.com/r/C4Y");
+  background-color: #272F56;
 }
 
 .navbar-header {
@@ -18,22 +14,20 @@ html, body, .container-fluid {
 }
 
 #landing {
-  background-image: url("http://jonwye.com/wordpress/wp-content/uploads/2012/03/LASERS.jpg");
+  background-image: url("http://s.mlkshk-cdn.com/r/C4Y");
   background-size: cover;
+  min-height: 100%;
+  padding-bottom: 25px;
 }
 
 #about {
   background-image: url("http://www.yearbookinnovation.com/data/images/backgrounds/top/senior/SBG13.jpg");
   background-size: cover;
+  background-color: #272F56;
 }
 
 a {
   color: #ff69b4;
-}
-
-#landing {
-  min-height: 100%;
-  padding-bottom: 25px;
 }
 
 #messenger {

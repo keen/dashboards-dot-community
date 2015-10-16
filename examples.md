@@ -14,7 +14,7 @@
   * [Landing page and dashboard](http://dashboards.community/)
 
 * From [HackTX](http://hacktx.com/) and [Taylor Barnett](https://twitter.com/taylor_atx):
-  * [HackTX's Open Source Dashboard](bit.ly/hacktxkeen) - created to help display organization level GitHub metrics
+  * [HackTX's Open Source Dashboard](https://bit.ly/hacktxkeen) - created to help display organization level GitHub metrics
 
 Have an example to share with others? PR! 
 

@@ -1,7 +1,7 @@
 **Here are some examples of community/evangelism dashboards in action:**
 
 * From [Jonas Rosland](http://github.com/jonasrosland) and team at [EMC {code}](http://emccode.github.io/): 
-  * [Dashboard (live)](http://dashboard.emccode.com/sample)
+  * [Dashboard (live)](http://dashboard.emccode.com/stats)
   * [Dashboard (backend)](http://dashboard.emccode.com/analytics)
   * [Tutorial (how-to)](http://purevirtual.eu/2015/02/09/creating-a-community-and-social-media-dashboard-using-dashing-and-keen-io/)
 

@@ -1,180 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dashboards dot Community</title>
-
-
-
-  <link rel="shortcut icon" href="https://keen.io/favicon.ico" type="image/x-icon" />
+  <title>Dashboards 4 Community</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="keen-dashboard.css" />
-  <link rel="stylesheet" type="text/css" href="style.css" />
 
-  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="https://d26b395fwzu5fz.cloudfront.net/3.2.7/keen.min.js"></script>
-  <script type="text/javascript" src="script.js"></script>
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Raleway' />
+  <link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+  <link rel="stylesheet" type='text/css' href="./style.css" />
 </head>
-<body class="application">
+<body>
 
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">Dashboards dot Community!</a>
-      </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-left">
-          <li><a href="https://api.keen.io/3.0/projects/55df52e9e08557169c200d01/events/link_clicked?api_key=746f3c35d2deba27273543298152fcea67d0d90796e9b699d853b07b7b18a340c7218e0256e8a17bc73ed947af7d74c978d64b83b6cdd4513641a4eae6d3be2731eba526cba195e9b0e2c507dbe7ebe611c52b3738e28de40ed1f801136b0024f5258e5cc652ace8b1426963f520d185&data=ew0KImNsaWNrIjogImhvbWUiDQp9&redirect=https://github.com/keen/dashboards-dot-community">Home</a></li>
-          <li><a href="https://api.keen.io/3.0/projects/55df52e9e08557169c200d01/events/link_clicked?api_key=746f3c35d2deba27273543298152fcea67d0d90796e9b699d853b07b7b18a340c7218e0256e8a17bc73ed947af7d74c978d64b83b6cdd4513641a4eae6d3be2731eba526cba195e9b0e2c507dbe7ebe611c52b3738e28de40ed1f801136b0024f5258e5cc652ace8b1426963f520d185&data=ew0KImNsaWNrIjogImNvbW11bml0eSINCn0=&redirect=https://keen.io/community">Keen Community Page</a></li>
-          <li><a href="https://api.keen.io/3.0/projects/55df52e9e08557169c200d01/events/link_clicked?api_key=746f3c35d2deba27273543298152fcea67d0d90796e9b699d853b07b7b18a340c7218e0256e8a17bc73ed947af7d74c978d64b83b6cdd4513641a4eae6d3be2731eba526cba195e9b0e2c507dbe7ebe611c52b3738e28de40ed1f801136b0024f5258e5cc652ace8b1426963f520d185&data=ew0KImNsaWNrIjogImhpZ2ggZml2ZSINCn0=&redirect=http://keen.github.io/highfive/">High-Five</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<div class="container">
+  
+  <div class="masthead hero">
 
-  <div class="container-fluid">
-  <div class="row" id="landing">
-    <div class="col-sm-2"></div>
-    <div class="col-sm-8">
-      <h2>Visiting from the CMX Yearbook?</h2>
-      <h4>Cool, you're in the right place!</h4>
-      <br>Leave a note to your fellow attendees of CMX Summit East 2015, be it to an individual or the entire community. Think of your most inspirational reflections, helpful lessons learned, or silliest, most memorable moments.
-      <h3>Sign the Yearbook by completing the form below and check out messages others have left!</h3>
-      <form action="" id="messenger" method="GET">
-        <label for="name-input" id="name-label">name:</label>
-        <input type="text" id="name-input" />
-        <br><label for="company-input" id="company-label">company:</label>
-        <input type="text" id="company-input" />
-        <br><label for="contact-input" id="contact-label">contact info:</label>
-        <input type="text" id="contact-input" />
-        <br><label for="note-input" id="note-label">write a note!:</label>
-        <textarea id="note-input" placeholder="leave a note =)"></textarea>
-        <br><input type="submit" value="submit" id="submit-button"/>
-      </form>
-      <div id="message-sent" style="display: none;">
-        <p>Thanks!</p>
-      </div>
-      <br>
-      <div class="chart-title">
-        Yay, Yearbook signatures! 
-        <div id="guestbook"></div>
-      </div>
-    </div>
-    <div class="col-sm-2"></div>
-  </div>
-  <div class="row">
-    <div class="col-sm-2"></div>
-    <div class="col-sm-8" id="about">
-      <h2>Learn more</h2>
-          <br>This fun little yearbook project is the starting point for a more extensive initiative. We hope to catalyze an open collaboration of community-minded professionals who strive to improve the analytics behind their community-building/evangelism efforts.
-          <br><br>At <a href="https://keen.io">Keen IO</a>, we devote a lot of resources to building community. Naturally, we want to understand the impact of our investments. There is data behind what we do; it's just not easy to gather and turn into meaningful information. We want to tackle this challenge, and we know others do, too. So, we're inviting the community of community builders to collaborate with each other, share knowledge and tactics, and think together.
-          <br><br>Sound vaguely interesting? It's all going down on <a href="https://api.keen.io/3.0/projects/55df52e9e08557169c200d01/events/link_clicked?api_key=746f3c35d2deba27273543298152fcea67d0d90796e9b699d853b07b7b18a340c7218e0256e8a17bc73ed947af7d74c978d64b83b6cdd4513641a4eae6d3be2731eba526cba195e9b0e2c507dbe7ebe611c52b3738e28de40ed1f801136b0024f5258e5cc652ace8b1426963f520d185&data=ew0KImNsaWNrIjogImdpdGh1YiINCn0=&redirect=https://github.com/keen/dashboards-dot-community">Github</a>. Join the conversation, help your peers, and learn from others' experiences.
-          <br><br>
-          <h2>See it in action!</h2>
-          <br>The dashboard below is a live example of what's possible. This is a simple visualization of the activity around the CMX Yearbook project. By collecting data, asking questions of it, and vizualizing the answers, we get a sense of the effectiveness of our partnership with <a href="http://cmxhub.com/">CMX</a>.
-          <br><br>If you'd like to create a dashboard like this to report your community team's performance, go ahead and <a href="https://api.keen.io/3.0/projects/55df52e9e08557169c200d01/events/link_clicked?api_key=746f3c35d2deba27273543298152fcea67d0d90796e9b699d853b07b7b18a340c7218e0256e8a17bc73ed947af7d74c978d64b83b6cdd4513641a4eae6d3be2731eba526cba195e9b0e2c507dbe7ebe611c52b3738e28de40ed1f801136b0024f5258e5cc652ace8b1426963f520d185&data=ew0KImNsaWNrIjogInNpZ251cCINCn0=&redirect=https://keen.io/signup/">create a free Keen IO account</a>. Need help? <a href="mailto:community@keen.io?Subject=My%20community%20dashboard" target="_top">We're here for ya!</a>
-          <br><hr><br>
-    </div>
-    <div class="col-sm-2"></div>
-  </div>
-  <div class="row" id="second">
-    <div class="col-sm-8">
-        <div class="chart-wrapper">
-          <div class="chart-title">
-            Where in the world are people signing the Yearbook?
-          </div>
-          <div id="chart-01"></div>
-          <div class="chart-notes">
-            High-Five
-          </div>
+      <header class="navbar navbar-static">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".keen-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="https://keen.io" class="navbar-brand" target="_blank">
+            <svg class="keen-logo" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 594 128" enable-background="new 0 0 594 128" xml:space="preserve">
+              <g class="icon">
+                <polygon class="red" fill="#FFFFFF" points="59.811,73.135 66.859,85.34 49.275,115.863 140.807,115.863 147.814,128 28.045,128"></polygon>
+                <polygon class="green" fill="#FFFFFF" points="59.873,24.297 91.504,79.242 77.413,79.242 59.826,48.781 13.958,128 0,128"></polygon>
+                <polygon class="blue" fill="#FFFFFF" points="133.769,103.674 70.364,103.674 77.418,91.432 112.586,91.432 66.915,12.1 73.9,0"></polygon>
+              </g>
+              <path class="text" fill="#FFFFFF" d="M246.12 94.163L216.29 57.373l27.704-27.484c1.199-1.195 1.782-2.475 1.782-3.91 0-2.906-2.496-5.453-5.341-5.453 -1.869 0-3.128 0.887-4.262 1.896l-43.89 44.996V26.094c0-3.07-2.498-5.568-5.568-5.568 -2.96 0-5.461 2.549-5.461 5.568v72.01c0 3.02 2.501 5.57 5.461 5.57 3.07 0 5.568-2.498 5.568-5.57V81.145l16.181-16.178 29.093 36.231c1.15 1.643 2.655 2.477 4.474 2.477 3.021 0 5.573-2.551 5.573-5.57C247.604 96.301 246.896 95.151 246.12 94.163zM309.211 71.702c0-15.379-9.767-30.948-28.434-30.948 -16.456 0-29.348 13.941-29.348 31.743v0.23c0 18.1 13.108 31.748 30.49 31.748 9.265 0 16.353-2.836 22.95-9.162 1.104-0.967 1.713-2.248 1.713-3.609 0-2.631-2.192-4.771-4.887-4.771 -1.466 0-2.503 0.719-3.195 1.293 -4.886 4.5-10.083 6.596-16.354 6.596 -10.378 0-18.167-7.188-19.675-18.006h41.627C306.917 76.815 309.211 74.52 309.211 71.702zM280.55 50.182c11.501 0 16.667 9.162 17.751 18.117h-35.831C263.956 57.574 271.266 50.182 280.55 50.182zM374.018 71.702c0-15.379-9.767-30.948-28.434-30.948 -16.454 0-29.344 13.941-29.344 31.743v0.23c0 18.1 13.107 31.748 30.486 31.748 9.263 0 16.351-2.836 22.95-9.164 1.103-0.965 1.71-2.246 1.71-3.607 0-2.631-2.193-4.771-4.889-4.771 -1.464 0-2.501 0.719-3.193 1.293 -4.886 4.5-10.082 6.596-16.352 6.596 -10.374 0-18.163-7.189-19.677-18.006h41.626C371.723 76.815 374.018 74.52 374.018 71.702zM345.357 50.182c11.497 0 16.662 9.162 17.749 18.117h-35.83C328.762 57.574 336.072 50.182 345.357 50.182zM414.734 40.754c-8.037 0-14.492 3.127-19.233 9.309V46.9c0-3.062-2.396-5.461-5.455-5.461 -2.945 0-5.342 2.449-5.342 5.461v51.319c0 3.059 2.396 5.455 5.455 5.455 3.045 0 5.342-2.346 5.342-5.455V68.271c0-10.312 6.874-17.514 16.717-17.514 9.606 0 15.342 6.291 15.342 16.826v30.635c0 3.059 2.398 5.455 5.461 5.455 2.999 0 5.348-2.396 5.348-5.455V65.414C438.369 50.434 429.092 40.754 414.734 40.754zM491.424 20.525c-2.958 0-5.457 2.549-5.457 5.568v72.01c0 3.02 2.499 5.57 5.457 5.57 3.072 0 5.572-2.498 5.572-5.57v-72.01C496.996 23.023 494.496 20.525 491.424 20.525zM552.307 19.725c-23.504 0-41.916 18.613-41.916 42.373v0.229c0 24.03 17.923 42.149 41.689 42.149 23.507 0 41.92-18.613 41.92-42.377v-0.227C594 37.844 576.076 19.725 552.307 19.725zM582.627 62.098v0.229c0 18.133-13.035 31.807-30.32 31.807 -17.411 0-30.541-13.773-30.541-32.036v-0.227c0-18.131 13.032-31.803 30.314-31.803C569.209 30.068 582.627 44.137 582.627 62.098z"></path>
+            </svg>
+          </a>
         </div>
-      </div>
-      <div class="col-sm-4">
-          <div class="chart-wrapper">
-            <div class="chart-title">
-              Visits grouped by country
-            </div>
-            <div id="chart-02"></div>
-            <div class="chart-notes">
-              From this month
-            </div>
-          </div>
-        </div>
-    </div>
-  <div class="row">
-    <div class="col-sm-8">
-      <div class="chart-wrapper">
-        <div class="chart-title">
-          Visits grouped by city
-        </div>
-        <div id="chart-03"></div>
-        <div class="chart-notes">
-          this month
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="chart-wrapper">
-        <div class="chart-title">
-          What devices are visitors using?
-        </div>
-        <div id="chart-04"></div>
-        <div class="chart-notes">
-          Fanboy war: commence!
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="chart-wrapper">
-        <div class="chart-title">
-          Pageviews this year
-        </div>
-        <div id="chart-09"></div>
-        <div class="chart-notes">
-          Wow!
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="chart-wrapper">
-        <div class="chart-title">
-          Pageviews this week
-        </div>
-        <div id="chart-10"></div>
-        <div class="chart-notes">
-          ohai
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="chart-wrapper">
-        <div class="chart-title">
-            Number of Yearbook signatures/notes
-        </div>
-        <div id="chart-11"></div>
-        <div class="chart-notes">
-          this year
-        </div>
-      </div>
-    </div>
-  </div>
+        <nav class="navbar-collapse collapse keen-navbar-collapse" role="navigation">
+          <ul class="nav navbar-nav main-nav">
+            <li><a href="https://keen.io/blog/129186963561/hello-community" target="_blank">About</a></li>
+            <li><a href="https://keen.io/team" target="_blank">Team</a></li>
+            <li><a href="https://keen.io/community" target="_blank">Community</a></li>
+            <li><a href="http://stackoverflow.com/questions/tagged/keen-io?sort=newest&amp;pageSize=15" target="_blank">Support</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://keen.io/signup?s=gh-dashboard-dot-community" class="btn navbar-btn" target="_blank">Create a Free Project</a></li>
+          </ul>
+        </nav>
+      </header>
 
-    <hr>
+      <h1>Dashboards dot Community</h1>
+      <p class="lead">A place to organize around and talk about measuring community</p>
+      <a class="btn hero-btn" href="https://github.com/keen/dashboards-dot-community" target="_blank">Source Code on Github</a>
 
-    <p class="small text-muted">Built with &#9829; by <a href="https://api.keen.io/3.0/projects/55df52e9e08557169c200d01/events/link_clicked?api_key=746f3c35d2deba27273543298152fcea67d0d90796e9b699d853b07b7b18a340c7218e0256e8a17bc73ed947af7d74c978d64b83b6cdd4513641a4eae6d3be2731eba526cba195e9b0e2c507dbe7ebe611c52b3738e28de40ed1f801136b0024f5258e5cc652ace8b1426963f520d185&data=ew0KImNsaWNrIjogImhvbWUgYnV0dG9uIg0KfQ==&redirect=https://keen.io">Keen IO</a></p>
+      <iframe src="http://ghbtns.com/github-btn.html?user=keen&amp;repo=dashboards-dot-community&amp;type=watch&amp;count=true"
+        allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+      <iframe src="http://ghbtns.com/github-btn.html?user=keen&amp;repo=dashboards-dot-community&amp;type=fork&amp;count=true"
+        allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+
+    </div>
+
+    <div class="love">
+      <p>Made with &#9825; in San Francisco</p>
+      <p>&copy; 2012&ndash;2015 <a href="https://keen.io">Keen IO</a></p>
+    </div>
 
   </div>
 
-<script src="keen-tracking.js" type="text/javascript"></script>
-
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://d26b395fwzu5fz.cloudfront.net/3.3.0/keen.min.js"></script>
+  <!-- <script type="text/javascript" src="./keen-tracking.js"></script> -->
 </body>
 </html>

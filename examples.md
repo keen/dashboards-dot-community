@@ -13,9 +13,6 @@
 * From the [CMX](http://cmxsummit.com/) Yearbook project (a community/sponsorship effort by the Keen IO team):
   * [Landing page and dashboard](http://dashboards.community/)
 
-* From [HackTX](http://hacktx.com/) and [Taylor Barnett](https://twitter.com/taylor_atx):
-  * [HackTX's Open Source Dashboard](https://bit.ly/hacktxkeen) - created to help display organization level GitHub metrics
-
 Have an example to share with others? PR! 
 
 
